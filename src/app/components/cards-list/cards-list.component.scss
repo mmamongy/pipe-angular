@@ -1,0 +1,36 @@
+
+.filter-wrapper{
+    .filter-by {
+        margin: 0.5rem;
+        padding:.5rem ; 
+        color: blue;
+    }
+
+    .tag-span{
+        background-color: #e6e6e6 ;
+        margin: 0.5rem;
+        border-radius: 38%;
+        padding:.5rem ; 
+        text-decoration: none;
+        &:hover,&:focus, &:active{
+            
+        }
+    }
+.item-category{
+    color: blue;
+    margin: 1rem 0; 
+}
+.cards-list{    
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    grid-gap: 30px;
+    
+    li{
+        border:solid 1px #ddd;        
+
+    }
+}
+}

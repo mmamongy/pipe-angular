@@ -6,18 +6,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterDataPipe } from './pipes/filter-data.pipe';
 import { FilterDataObjectsPipe } from './pipes/filter-data-objects.pipe';
+import { CardComponent } from './components/card/card.component' ;
+import { CardsListComponent } from './components/cards-list/cards-list.component' ;
+import { AppRoutingModule } from './app-routing.module';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterDataPipe,
-    FilterDataObjectsPipe
+    FilterDataObjectsPipe,
+    CardComponent,
+    CardsListComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule, 
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

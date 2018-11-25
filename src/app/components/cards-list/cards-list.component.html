@@ -1,0 +1,20 @@
+<div class="filter-wrapper">
+
+<div>
+    <input type="text" class="form-control" placeholder="search..." [(ngModel)]="mySearch1">
+</div>
+
+<div class="row">
+    <span class="filter-by">Filter By:</span> 
+    <a  href="#" class="tag-span" *ngFor="let tag of tags" (click)="filterByTag(tag.value)" ><span >{{tag.value}}</span></a>
+
+</div>
+<div *ngFor="let item of apps">
+    <h2 class="item-category">&middot;   {{item.category}}</h2>
+    <ul class="cards-list">
+        <li *ngFor="let app of (item.apps | filterDataObjects: mySearch1 | filterData: mySearch1 :'tags')">
+            <app-card [card]="app"></app-card>
+        </li>
+    </ul>
+</div>
+</div>

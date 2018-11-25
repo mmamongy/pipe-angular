@@ -1,0 +1,48 @@
+[
+    {
+        "category": "Ticketing Systems",
+        "apps":[
+        {
+            "title": "HelpDesk",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "Assisting you on business software and hardware related issues.",
+            "tags" : ["All Depratments", "Help Desk"]
+        }      
+        ,
+        {
+           "title": "Facility Support",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "Ticketing System for Maintenance & Cleaning services for Office Furniture, Meeting Rooms and Air Conditioning.",
+            "tags" : ["All Depratments", "Facility Support"]
+        },
+        {
+            "title": "Talent Support",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "Assisting you on salaries, benefits, vacations, HR letters, etc..",
+            "tags" : ["All Depratments", "Talent"]
+        }]
+    },
+    {
+        "category": "Documents",
+        "apps":[
+        {
+            "title": "Brand Manual & Templates",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "Assisting you on business software and hardware related issues." ,
+            "tags" : ["All Depratments", "Facility"]
+        }      
+        ,
+        {
+            "title": "Standards",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "Standards", 
+            "tags" : ["All Depratments", "Facility"]
+        },
+        {
+            "title": "Administration Docs",
+            "icon": "./assets/img/ico-help.gif",
+            "brief": "All Administration Documents such as buses, building maps and so on.",
+            "tags" : ["All Depratments","SCO"]
+        }]
+    }
+]
