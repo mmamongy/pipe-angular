@@ -1,6 +1,16 @@
 <div class="card-item">
-  <h3>{{card.title}}</h3>
-  <img [src]="card.icon" />
-  <p>{{card.brief}}</p>
-  tags: <span *ngFor="let tag of card.tags">{{tag}} -</span> 
+  <div class="title-container">
+  <h3 class="py-auto">{{card.title}}</h3>
+</div>
+
+  <div class="descrption">
+      <div class="text-center">
+          <i class="{{card.icon}}  icon"></i>
+          </div>
+  <p>{{  card.brief.length > 90 ? card.brief.substring(0,90) + '...' : card.brief }}</p>
+  
+
+  <span *ngFor="let tag of card.tags" class="tag">{{tag}} </span> 
+</div>
+
 </div>

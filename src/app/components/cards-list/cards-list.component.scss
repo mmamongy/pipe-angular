@@ -1,42 +1,117 @@
+.navbar.dark-blue{
+    width: 100%;;
+    background: #07307b;
+    color: #fff;
+    .title{
+        font-size: 1.5625rem;
+        font-weight: 800 ;
+    }
+    .form-inline {
+        width: 60%;
+    }
+    input {
+        border-radius: 0 ;
+        width:65%;
+        height: 35px;
+    }
+    .search-btn {
+        width: 30%;
+        height: 35px;
+        background-color: #07307b;
+        color: #fff; 
+        &:focus, &:hover {
+            background-color: #fff ;
+            color: #07307b ;
+            
+        }
+    }
+}
+
 
 .filter-wrapper{
     .filter-by {
-        margin: 0.5rem;
-        padding:.5rem ; 
-        color: blue;
+        margin: 0.6rem;
+        padding:5px 8px ; 
+        color: #07307b;
+        font-size: 1.375rem;
+        font-weight: 400;
     }
 
     .tag-span{
-        background-color: #e6e6e6 ;
-        margin: 0.5rem;
-        border-radius: 38%;
-        padding:.5rem ; 
+        height: 32px;
+        background-color: #bcbcbc ;
+        margin: 1rem 0.4rem;     
+        border-radius:7px;
+        padding:5px 8px ; 
         text-decoration: none;
+        font-size: 0.875rem ;
+        font-weight: 400 ;
+        color: #fff;
         &:hover,&:focus, &:active{
-            background-color: orangered ;
-            color: #ddd ;
+            background-color: #ac2424 ;
+            color: #fff ;
              
         }
     }
     .tag-span-selected {
-        background-color: orangered ;
-        color: #ddd ;
+        background-color: #ac2424 ;
+        color: #fff ;
     }
 .item-category{
-    color: blue;
+    color: #07307b;
     margin: 1rem 0; 
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 .cards-list{    
     padding:0;
     margin:0;
     list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);;
-    grid-gap: 30px;
-    
-    li{
-        border:solid 1px #ddd;        
-
+  
+    .card-list-item {
+        width: 100%;
     }
+    
+    
 }
 }
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    //CSS
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    //CSS
+    
+  }

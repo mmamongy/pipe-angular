@@ -45,18 +45,14 @@ export class CardsListComponent implements OnInit {
   }
 
   filterByTag(id ,value){
-    console.log("Tag   : " ,value) ;
     this.selcetedTag = id ; 
     this.selectedTgaVlue = value ;
   }
 
   checkTag(value) {
     if (value.find( o => o == this.selectedTgaVlue)){
-      console.log('yes') ;
       return true ;
     } else {
-      console.log('yes') ;
-       return false ;
     }
   }
    

@@ -4,22 +4,22 @@
         "apps":[
         {
             "title": "HelpDesk",
-            "icon": "./assets/img/ico-help.gif",
+            "icon":  "fas fa-life-ring",
             "brief": "Assisting you on business software and hardware related issues.",
-            "tags" : ["All Depratments", "Help Desk"]
+            "tags" : ["All Departments", "Help Desk"]
         }      
         ,
         {
            "title": "Facility Support",
-            "icon": "./assets/img/ico-help.gif",
+            "icon": "fas fa-wrench",
             "brief": "Ticketing System for Maintenance & Cleaning services for Office Furniture, Meeting Rooms and Air Conditioning.",
-            "tags" : ["All Depratments", "Facility Support"]
+            "tags" : ["All Departments", "Facility Support"]
         },
         {
             "title": "Talent Support",
-            "icon": "./assets/img/ico-help.gif",
+            "icon": "fas fa-life-ring",
             "brief": "Assisting you on salaries, benefits, vacations, HR letters, etc..",
-            "tags" : ["All Depratments", "Talent"]
+            "tags" : ["All Departments", "Talent"]
         }]
     },
     {
@@ -27,22 +27,34 @@
         "apps":[
         {
             "title": "Brand Manual & Templates",
-            "icon": "./assets/img/ico-help.gif",
+            "icon": "fas fa-life-ring",
             "brief": "Assisting you on business software and hardware related issues." ,
-            "tags" : ["All Depratments", "Facility"]
+            "tags" : ["All Departments", "Facility"]
         }      
         ,
         {
             "title": "Standards",
-            "icon": "./assets/img/ico-help.gif",
+            "icon": "fas fa-life-ring",
             "brief": "Standards", 
-            "tags" : ["All Depratments", "Facility"]
+            "tags" : ["All Departments", "Facility"]
         },
         {
             "title": "Administration Docs",
-            "icon": "./assets/img/ico-help.gif",
+            "icon": "fas fa-life-ring",
             "brief": "All Administration Documents such as buses, building maps and so on.",
-            "tags" : ["All Depratments","SCO"]
+            "tags" : ["All Departments","SCO"]
+        },
+        {
+            "title": " Docs",
+            "icon": "fas fa-life-ring",
+            "brief": "All Administration Documents such as buses, building maps and so on.",
+            "tags" : ["All Departments","SCO"]
+        },
+        {
+            "title": "Administration Docs",
+            "icon": "fas fa-life-ring",
+            "brief": "All Administration Documents such as buses, building maps and so on.",
+            "tags" : ["All Departments","SCO"]
         }]
     }
 ]
