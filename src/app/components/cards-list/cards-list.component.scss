@@ -13,8 +13,14 @@
         padding:.5rem ; 
         text-decoration: none;
         &:hover,&:focus, &:active{
-            
+            background-color: orangered ;
+            color: #ddd ;
+             
         }
+    }
+    .tag-span-selected {
+        background-color: orangered ;
+        color: #ddd ;
     }
 .item-category{
     color: blue;

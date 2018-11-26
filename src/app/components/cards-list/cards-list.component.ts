@@ -14,6 +14,8 @@ export class CardsListComponent implements OnInit {
 
   apps : ICardInfo[];
   mySearch1 : any ;
+  selcetedTag : number = 1;
+  selectedTgaVlue: string ='All Departments' ;
   tags = [
     { id: 1 , value :'All Departments'}  ,
     { id: 2 , value: 'Administration'},
@@ -42,8 +44,20 @@ export class CardsListComponent implements OnInit {
     return this.http.get(getSystemsListAPI)
   }
 
-  filterByTag(value){
-    console.log("Tag value : " ,value) ;
+  filterByTag(id ,value){
+    console.log("Tag   : " ,value) ;
+    this.selcetedTag = id ; 
+    this.selectedTgaVlue = value ;
+  }
+
+  checkTag(value) {
+    if (value.find( o => o == this.selectedTgaVlue)){
+      console.log('yes') ;
+      return true ;
+    } else {
+      console.log('yes') ;
+       return false ;
+    }
   }
    
 }

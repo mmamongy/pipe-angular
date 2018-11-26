@@ -9,7 +9,9 @@ import {ICardInfo} from '../../helperClasses/commonIneterfaces';
 export class CardComponent implements OnInit {
 
   @Input() card: ICardInfo;
-  constructor() { }
+  
+  constructor() { 
+  }
 
   ngOnInit() {
    

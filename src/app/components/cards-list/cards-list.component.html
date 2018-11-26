@@ -6,14 +6,16 @@
 
 <div class="row">
     <span class="filter-by">Filter By:</span> 
-    <a  href="#" class="tag-span" *ngFor="let tag of tags" (click)="filterByTag(tag.value)" ><span >{{tag.value}}</span></a>
+    <a  href="#" class="tag-span"  *ngFor="let tag of tags" [ngClass]="{'tag-span-selected': selcetedTag== tag.id  }" (click)="filterByTag(tag.id, tag.value)" ><span >{{tag.value}}</span></a>
 
 </div>
 <div *ngFor="let item of apps">
     <h2 class="item-category">&middot;   {{item.category}}</h2>
     <ul class="cards-list">
-        <li *ngFor="let app of (item.apps | filterDataObjects: mySearch1 | filterData: mySearch1 :'tags')">
-            <app-card [card]="app"></app-card>
+        <li *ngFor="let app of (item.apps | filterDataObjects: mySearch1 ) " >
+            <div [hidden]="checkTag(app.tags)" *ngIf ="checkTag(app.tags)">
+            <app-card  [card]="app"></app-card>
+        </div>
         </li>
     </ul>
 </div>
