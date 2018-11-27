@@ -1,7 +1,10 @@
+
+
 .navbar.dark-blue{
-    width: 100%;;
+    
     background: #07307b;
     color: #fff;
+    margin-top:-20px ;
     .title{
         font-size: 1.5625rem;
         font-weight: 800 ;
@@ -29,12 +32,15 @@
 
 
 .filter-wrapper{
+    margin-top:1rem; 
+    
     .filter-by {
         margin: 0.6rem;
         padding:5px 8px ; 
         color: #07307b;
         font-size: 1.375rem;
         font-weight: 400;
+        clear: both;
     }
 
     .tag-span{

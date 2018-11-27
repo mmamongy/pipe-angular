@@ -1,3 +1,64 @@
+.header {
+    background-image: url('./../assets/img/bg.png') ;
+    background-repeat: no-repeat;
+    display: block ;
+    height: 167px; 
+    background-position: center top;
+    width: 100%;
+   
+    .comms-img{
+       margin: 10px 0 ; 
+       padding: 20px 0;
+       width: 80%;
+    }
+    .loging-info{
+        background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(53%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 53%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+height: 145px;
+
+
+
+
+     .user-img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background:#fff; 
+        }
+        .user{
+            .user-info{
+                font-size: 1rem ;
+                color: #000 ;
+                font-weight: 600 ;
+                padding: 3px 0 ;
+                // border-bottom: 2px solid #000 ;
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            .info {
+                a {
+                    color: #d51717 ;
+                    padding: 5px ;
+                    font-size: 0.875rem ;
+                    font-weight: 400 ;
+                }
+            }
+        
+        }
+
+    }
+    .add-margin{ 
+        // margin: 0 0;
+    }
+}
+
 .footer{
     height: 81px;
     background-color: #333333;
