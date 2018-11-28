@@ -27,18 +27,19 @@
     </div>
   <div class="my-auto col-lg-9 ">
     <p><a href="#" class="tag-span" 
-     *ngFor="let tag of tags" [ngClass]=" status ? 'tag-span-selected' : 'tag-span'"
+     *ngFor="let tag of tags" [ngClass]="{'tag-span-selected': selectedTgaVlue == tag}"
       (click)="filterByTag(tag)"><span>{{tag}}</span></a>
     </p>
     </div>
   </div>
   <div *ngFor="let item of apps" >
-    <h2 class="item-category" *ngIf="showCategory" > &middot; {{item.Name}}</h2>
+    <h2 class="item-category"> &middot; {{item.Name}}</h2>
     <ul class="row cards-list" >
-      <li *ngFor="let app of (item.SystemInfos | filterDataObjects: mySearch1)" 
-      class="card-list-item col-lg-3 col-md-6 col-sm-6">
-        <app-card *ngIf="checkTag(app.Tags)" [card]="app"></app-card>
+      <ng-container *ngFor="let app of (item.SystemInfos | filterDataObjects: mySearch1)">
+      <li *ngIf="checkTag(app.Tags)" class="card-list-item col-lg-3 col-md-6 col-sm-6">
+        <app-card  [card]="app"></app-card>
       </li>
+    </ng-container>
     </ul>
   </div>
 </div>
