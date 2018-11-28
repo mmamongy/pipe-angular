@@ -33,26 +33,32 @@
 
 .filter-wrapper{
     margin-top:1rem; 
+   .filter-by-wrapper{
+       margin-right:-29px; 
+   }
     
     .filter-by {
         margin: 0.6rem;
         padding:5px 8px ; 
         color: #07307b;
-        font-size: 1.375rem;
-        font-weight: 400;
+        font-size: 1rem;
+        font-weight: 600;
         clear: both;
+        display: inline-block;
+       
     }
 
     .tag-span{
         height: 32px;
         background-color: #bcbcbc ;
-        margin: 1rem 0.4rem;     
-        border-radius:7px;
-        padding:5px 8px ; 
+        margin: 0.5rem 0.4rem;     
+        border-radius:12px;
+        padding:4px 14px ; 
         text-decoration: none;
         font-size: 0.875rem ;
         font-weight: 400 ;
         color: #fff;
+        float: left;
         &:hover,&:focus, &:active{
             background-color: #ac2424 ;
             color: #fff ;
@@ -82,10 +88,18 @@
 }
 }
 
+.hide {
+    display: none;
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   
     //CSS
+    .filter-by {
+        font-size: 1rem ;
+
+    }
     
   }
   

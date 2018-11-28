@@ -1,60 +1,243 @@
+
 [
     {
-        "category": "Ticketing Systems",
-        "apps":[
+      "CategoryId": "521af7e3-48a9-4542-92bc-170b9e9eb5dd",
+      "Name": "Procurement & Expenses",
+      "SystemInfos": [
         {
-            "title": "HelpDesk",
-            "icon":  "fas fa-life-ring",
-            "brief": "Assisting you on business software and hardware related issues.",
-            "tags" : ["All Departments", "Help Desk"]
-        }      
-        ,
-        {
-           "title": "Facility Support",
-            "icon": "fas fa-wrench",
-            "brief": "Ticketing System for Maintenance & Cleaning services for Office Furniture, Meeting Rooms and Air Conditioning.",
-            "tags" : ["All Departments", "Facility Support"]
+          "SystemId": "dd690bc4-3dab-4344-92d8-a9906b8aac14",
+          "CategoryId": "521af7e3-48a9-4542-92bc-170b9e9eb5dd",
+          "Name": "ReqLogic",
+          "Tags": "Procurement",
+          "Description": "Through this system you can submit your time sheet and check the projects that are assigned to you..",
+          "URL": "https://reqlogic.itworx.com/reqlogic/ReQlogic.aspx"
         },
         {
-            "title": "Talent Support",
-            "icon": "fas fa-life-ring",
-            "brief": "Assisting you on salaries, benefits, vacations, HR letters, etc..",
-            "tags" : ["All Departments", "Talent"]
-        }]
+          "SystemId": "e5ed6f80-9b08-47bf-89f3-d7e76416cd05",
+          "CategoryId": "521af7e3-48a9-4542-92bc-170b9e9eb5dd",
+          "Name": "Changepoint",
+          "Tags": "MIS",
+          "Description": "Through this system you can submit your time sheet and check the projects that are assigned to you..",
+          "URL": "https://xworx.itworx.com"
+        }
+      ]
     },
     {
-        "category": "Documents",
-        "apps":[
+      "CategoryId": "c8655b37-1446-4981-9038-372025565a44",
+      "Name": "Performance",
+      "SystemInfos": [
         {
-            "title": "Brand Manual & Templates",
-            "icon": "fas fa-life-ring",
-            "brief": "Assisting you on business software and hardware related issues." ,
-            "tags" : ["All Departments", "Facility"]
-        }      
-        ,
-        {
-            "title": "Standards",
-            "icon": "fas fa-life-ring",
-            "brief": "Standards", 
-            "tags" : ["All Departments", "Facility"]
+          "SystemId": "d3fc382d-90a6-4579-b500-20eba1a6fa5b",
+          "CategoryId": "c8655b37-1446-4981-9038-372025565a44",
+          "Name": "Time Submission",
+          "Tags": "Talent",
+          "Description": "Assisting you on submitting working time, review your current assigned projects and tasks.",
+          "URL": "https://xworx.itworx.com"
         },
         {
-            "title": "Administration Docs",
-            "icon": "fas fa-life-ring",
-            "brief": "All Administration Documents such as buses, building maps and so on.",
-            "tags" : ["All Departments","SCO"]
+          "SystemId": "8bee64de-d0d1-4c69-bee8-42df632bbf3f",
+          "CategoryId": "c8655b37-1446-4981-9038-372025565a44",
+          "Name": "Qualifications",
+          "Tags": "Talent",
+          "Description": "Through this system you can add or update your current certificates, skills and trainings.",
+          "URL": "https://inworx.itworx.com"
         },
         {
-            "title": " Docs",
-            "icon": "fas fa-life-ring",
-            "brief": "All Administration Documents such as buses, building maps and so on.",
-            "tags" : ["All Departments","SCO"]
+          "SystemId": "cca5fa52-466b-4d99-a149-54074383cbdd",
+          "CategoryId": "c8655b37-1446-4981-9038-372025565a44",
+          "Name": "Taleo",
+          "Tags": "Talent",
+          "Description": "Interviewers have access to this system to review candidates’ status, process and profile.",
+          "URL": "https://ldd.tbe.taleo.net/ldd04/ats/myView/MyView.jsp?tabs=Y\r\n"
         },
         {
-            "title": "Administration Docs",
-            "icon": "fas fa-life-ring",
-            "brief": "All Administration Documents such as buses, building maps and so on.",
-            "tags" : ["All Departments","SCO"]
-        }]
+          "SystemId": "f5609528-6b83-45b9-9c44-997859f25a2e",
+          "CategoryId": "c8655b37-1446-4981-9038-372025565a44",
+          "Name": "Talent Performance Management",
+          "Tags": "Talent",
+          "Description": "Assisting you on tracking your Goals and development plan",
+          "URL": "https://global.hgncloud.com/itworx/welcome.jsp"
+        }
+      ]
+    },
+    {
+      "CategoryId": "6f6c045b-beef-4769-800a-54ea3553ff5f",
+      "Name": "Communications",
+      "SystemInfos": [
+        {
+          "SystemId": "bd0db1c7-bc00-490e-bba0-3466814b1ae6",
+          "CategoryId": "6f6c045b-beef-4769-800a-54ea3553ff5f",
+          "Name": "ITWORX HUB",
+          "Tags": "Communications",
+          "Description": "Assisting you on the latest corporate and social news",
+          "URL": "https://www.itworx-hub.com/"
+        },
+        {
+          "SystemId": "e3a63d69-42e2-4f01-beea-8a5fe0dd6d72",
+          "CategoryId": "6f6c045b-beef-4769-800a-54ea3553ff5f",
+          "Name": "Skype for Business",
+          "Tags": "Communications",
+          "Description": "Assisting you on having quick chat with your colleagues.",
+          "URL": ""
+        }
+      ]
+    },
+    {
+      "CategoryId": "bb01c2cf-cc54-4919-9229-6bf1de6f2426",
+      "Name": "Travel",
+      "SystemInfos": [
+        {
+          "SystemId": "98cb9ecb-2ee9-49ef-a30e-bba8c6a29f3e",
+          "CategoryId": "bb01c2cf-cc54-4919-9229-6bf1de6f2426",
+          "Name": "Travel Policy",
+          "Tags": "Administration",
+          "Description": "Through this system you can submit your time sheet and check the projects that are assigned to you..",
+          "URL": "https://inworx.itworx.com/site/Administration/Lists/Policies"
+        },
+        {
+          "SystemId": "cf034974-0e6d-4046-95cd-d5e41f53122d",
+          "CategoryId": "bb01c2cf-cc54-4919-9229-6bf1de6f2426",
+          "Name": "Travel System",
+          "Tags": "Administration",
+          "Description": "Assisting you on booking your business and personal travel",
+          "URL": "https://travel.itworx.com"
+        }
+      ]
+    },
+    {
+      "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+      "Name": "Documents",
+      "SystemInfos": [
+        {
+          "SystemId": "78b4f327-a825-4632-bf36-19ca6ebf64dc",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Brand Manual & Templates",
+          "Tags": "Communications",
+          "Description": "Assisting you on corporate templates shared internally or with clients.",
+          "URL": "http://docs.itworx.com"
+        },
+        {
+          "SystemId": "b38e7ec9-57e0-4237-adb5-215ee2de739b",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Talent Rewards Docs",
+          "Tags": "Talent",
+          "Description": "All Administration Documents such as Medical Insurance Network, Premium Card, vacation and leave policy.",
+          "URL": "https://www.itworx-hub.com/departments/3c6f0bb3-2111-432f-bddb-3e6ae52c5be8/files"
+        },
+        {
+          "SystemId": "8fc31346-ca6e-45a5-8cab-222a2a5e3910",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Administration Docs",
+          "Tags": "Administration",
+          "Description": "All Administration Documents such as buses, building maps and so on.",
+          "URL": "https://www.itworx-hub.com/departments/5f657a80-5c54-43fe-952f-59944c9d9d6e/files"
+        },
+        {
+          "SystemId": "e3c70703-35d6-4d3e-984a-76c82e100b9c",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "MIS Docs",
+          "Tags": "MIS",
+          "Description": "All Administration Documents such as ITWORX IT Compliance Policy.",
+          "URL": "https://www.itworx-hub.com/departments/86106177-4f53-4e13-a479-ee74bb1d04c4/files"
+        },
+        {
+          "SystemId": "e8f5d511-61a9-40cf-a100-7b27adc74278",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Marketing Central",
+          "Tags": "Marketing",
+          "Description": "You can check the current Marketing materials or request new ones such as flyer, brochures and videos.",
+          "URL": "https://marketingcentral.itworx.com"
+        },
+        {
+          "SystemId": "d0b44e26-9b08-4747-b5e1-aacf1a1bb853",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Talent Management Docs",
+          "Tags": "Talent",
+          "Description": "All Administration Documents such as ITWORX code of conduct, TPM system guide and promotion policy.",
+          "URL": "https://www.itworx-hub.com/departments/bfd64657-e68f-49d6-bbfd-dc83c705c122/files"
+        },
+        {
+          "SystemId": "70c721ae-60b9-46a2-a7dd-bee3614d3400",
+          "CategoryId": "e757b0e7-de61-428e-8f84-75c89bfdf1a9",
+          "Name": "Standards",
+          "Tags": "OPEX",
+          "Description": "All the technical processes shared through this system",
+          "URL": "http://standards.itworx.com/"
+        }
+      ]
+    },
+    {
+      "CategoryId": "d37d34ab-1eee-49ea-802f-7a1a61ea78e8",
+      "Name": "Ticketing Systems",
+      "SystemInfos": [
+        {
+          "SystemId": "919700c1-377c-4e4f-8182-1a1166b18a9f",
+          "CategoryId": "d37d34ab-1eee-49ea-802f-7a1a61ea78e8",
+          "Name": "Help Desk",
+          "Tags": "MIS",
+          "Description": "Assisting you on business software and hardware related issues.",
+          "URL": "https://help.itworx.com"
+        },
+        {
+          "SystemId": "af968fc8-6cbf-41bf-bb16-605b53aab070",
+          "CategoryId": "d37d34ab-1eee-49ea-802f-7a1a61ea78e8",
+          "Name": "Talent Support",
+          "Tags": "Administration",
+          "Description": "Assisting you on salaries, benefits, vacations, HR letters, etc",
+          "URL": "https://talentsupport.itworx.com/\r\n"
+        },
+        {
+          "SystemId": "f916ef57-51dd-42ff-93a3-ee97d2faae73",
+          "CategoryId": "d37d34ab-1eee-49ea-802f-7a1a61ea78e8",
+          "Name": "Facility Support",
+          "Tags": "Facility",
+          "Description": "Ticketing System for Maintenance & Cleaning services for Office Furniture, Meeting Rooms and Air Conditioning.",
+          "URL": "https://facilitysupport.itworx.com/"
+        }
+      ]
+    },
+    {
+      "CategoryId": "ce70df49-4880-4c7a-8ba9-993fe7e08b97",
+      "Name": "Testing",
+      "SystemInfos": [
+        {
+          "SystemId": "7ef4bf32-608f-4034-a8e5-c14e123d2a3d",
+          "CategoryId": "ce70df49-4880-4c7a-8ba9-993fe7e08b97",
+          "Name": "Bugbase",
+          "Tags": "Quality",
+          "Description": "Assisting you on logging, reviewing and tracking current project’s issues.",
+          "URL": "https://bugbase.itworx.com/bugbase"
+        }
+      ]
+    },
+    {
+      "CategoryId": "b37dfef3-112a-4510-9d2a-e9ce3e1cf284",
+      "Name": "Entertainment",
+      "SystemInfos": [
+        {
+          "SystemId": "1fd45412-a6e8-4581-b8b2-18ec300809eb",
+          "CategoryId": "b37dfef3-112a-4510-9d2a-e9ce3e1cf284",
+          "Name": "Music Gateway",
+          "Tags": "Communications",
+          "Description": "Free library of music shared to all ITWORXians.",
+          "URL": "http://musicgateway.itworx.com/web/index.html"
+        },
+        {
+          "SystemId": "b9421fbd-411c-438c-81c0-f09c987dd0d0",
+          "CategoryId": "b37dfef3-112a-4510-9d2a-e9ce3e1cf284",
+          "Name": "Studio",
+          "Tags": "Communications",
+          "Description": "Assisting you on corporate events moments",
+          "URL": "http://studio.itworx.com"
+        },
+        {
+          "SystemId": "fd47ea54-8cc5-4be9-aeb7-f4aa308ecf41",
+          "CategoryId": "b37dfef3-112a-4510-9d2a-e9ce3e1cf284",
+          "Name": "Vacations",
+          "Tags": "Talent",
+          "Description": "Assisting you on scheduling your vacation and check your current balance.",
+          "URL": "http://vacations.itworx.com/"
+        }
+      ]
     }
-]
+  ]

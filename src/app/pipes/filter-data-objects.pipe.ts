@@ -13,7 +13,7 @@ export class FilterDataObjectsPipe implements PipeTransform {
       Object.keys(v).forEach( k=> {
         if (typeof(v[k]) === 'string'){
           console.log("is string ") ;
-          match = match || v[k].indexOf(filter) >= 0 ;
+          match = match || v[k].toLowerCase().indexOf(filter) >= 0 ;
         } else {
           match = match || v[k] == filter ;
         } 

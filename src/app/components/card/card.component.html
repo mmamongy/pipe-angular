@@ -1,13 +1,13 @@
 <div class="card-item">
   <div class="title-container">
-  <h3 class="py-auto">{{card.title}}</h3>
+  <h3 class="py-auto">{{card.Name}}</h3>
 </div>
 
   <div class="descrption">
       <div class="text-center">
           <i class="{{card.icon}}  icon"></i>
           </div>
-  <p>{{  card.brief.length > 90 ? card.brief.substring(0,90) + '...' : card.brief }}</p>
+  <p>{{  card.Description.length > 90 ? card.Description.substring(0,90) + '...' : card.Description }}</p>
   
 
   <!-- <span *ngFor="let tag of card.tags" class="tag">{{tag}} </span>  -->
