@@ -14,8 +14,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class CardsListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
-     console.log(this.element.nativeElement.children[0]);
-     console.log(this.element.nativeElement.children[0].offsetHeight);
+    //  console.log(this.element.nativeElement.children[0]);
+    //  console.log(this.element.nativeElement.children[0].offsetHeight);
+     console.log( document.getElementsByTagName('li')) ;
   
   }
 
@@ -39,15 +40,19 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   status: boolean = false;
   showCategory : true ;
   count : number = 0 ;
+  temp : Array<any> ;
 
 
   constructor(private http:HttpClient , private api :ApisService , el: ElementRef){
     this.element = el ;
+    this.temp =[] ;
     this.getSystemsData().subscribe(data => {
       console.log(data);
       this.apps = data;
+      this.filterAll() ;
+      
   });
-
+  
   // this.api.getTags().subscribe(data => {
   //   console.log("tags "  ,data) ;
   // })
@@ -76,34 +81,45 @@ export class CardsListComponent implements OnInit, AfterViewInit {
        return false;
     }
   }
-
-
+ 
   filterAll(){
-    this.apps = this.apps.filter( v => {
-      if (this.mySearch1 =='' &&  this.selectedTgaVlue==''){
-        return this.apps ;
-      }else if (this.mySearch1 !==''){
-        let match = false ;
-        Object.keys(v).forEach( k=> {
-          if (typeof(v[k]) === 'string'){
-            console.log(v[k]) ;
-            match = match || v[k].toLowerCase().indexOf(this.mySearch1) >= 0 ;
-          } else if(typeof(v[k] === 'object')){
-            v[k].forEach(y => {
-              if( typeof(v[k][y]) === 'string')
-              match = match || v[k][y].toLowerCase().indexOf(this.mySearch1) >= 0 ;             
-            });
-          }
-           else {
-            match = match || v[k] === this.mySearch1 ;
-          } 
-        }) ;
-        console.log(match) ;
-        return match ;
-    } 
-      }
-    );
+   this.mySearch1 ='admin' ;
+    if(this.mySearch1 ==''){
+      this.temp = this.apps.map(x => Object.assign({}, x));
     }
-   
+    this.apps.forEach(e => {
+      if (e.Name.toLowerCase().indexOf(this.mySearch1) > -1 ) {
+        e.SystemInfos.forEach(t => {
+          Object.keys(t).forEach(r => {
+            if (typeof(r) =='string'){
+              if(r.toLowerCase().indexOf(this.mySearch1) > -1){
+                this.temp.push({
+                  Name :e.Name , 
+                  SystemInfos :{} =  t 
+                }) ;
+              }
+            }
+          })
+        })
+      } else { 
+        e.SystemInfos.forEach(t => {
+          console.log('TT ' ,t)
+          for ( let [key, value] of Object.entries(t)){
+            if (typeof(value) =='string'){
+              console.log(value.toLowerCase().indexOf(this.mySearch1))
+              if (value.toLowerCase().indexOf(this.mySearch1) > -1){
+              console.log('Value ' , value) ;
+              this.temp.push({ 
+                Name :e.Name , 
+                SystemInfos :{} =  t 
+              }) ; }
+           
+        }
+      }
+    });
+  }
+}) ;
+console.log('HAH ' , this.temp);
+  
+  }
 }
-

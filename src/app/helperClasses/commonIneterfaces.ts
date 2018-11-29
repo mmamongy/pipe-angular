@@ -24,7 +24,7 @@ export interface IHttpResponse {
 }
 
 export interface ICardInfo {
-    SystemInfos: string;
+    SystemInfos: [];
     Name: string;
     icon: string;
     Description: number;
