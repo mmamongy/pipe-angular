@@ -3,6 +3,13 @@
     height: 270px; 
     width: 100% !important;
     margin: 1rem  0;
+    .go-to{
+        text-decoration: none ;
+        &:hover,  &:focus{
+            text-decoration: none;
+        }
+    
+    }
 
     .descrption  {
         margin: .5rem  1rem ; 
@@ -17,15 +24,7 @@
            font-size: 0.8rem;
            height: 100px;
         }
-        .go-to{
-            text-decoration: none ;
-            background: #07307b;
-             color: #fff;
-            text-align: center;
-            width: -webkit-fill-available;
-            font-size: 14px;
-            white-space: normal ;
-        }
+        
      }
     .title-container {
         margin: .5rem 0 ;
