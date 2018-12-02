@@ -1,51 +1,50 @@
-
-
-
-  <div class="container">
-      <!-- nabvar -->
-      <nav class="navbar dark-blue row ">
-        <div class="navbar-brand col-lg-5 col-sm-7">
-        <h2 class="title">All ITWORX Systems are found here.</h2>
-        <h2 class="title">All the Dots are connected.</h2>
+<div class="container">
+  <!-- nabvar -->
+  <nav class="navbar dark-blue row ">
+    <div class="navbar-brand col-lg-5 col-sm-7">
+      <h2 class="title">All ITWORX Systems are found here.</h2>
+      <h2 class="title">All the Dots are connected.</h2>
     </div>
-        <div class="form-inline col-lg-6 col-sm-7">
-          <input class="form-control  mr-sm-2" type="search" placeholder="Search for a system, tool, website.." [(ngModel)]="mySearch1" aria-label="Search"
-          (click)="filterAll()"
-          >
-          <button class="btn btn-light my-2 my-sm-0 search-btn" >Search</button>
-        </div>
-      </nav>
+    <div class="form-inline col-lg-6 col-sm-7">
+      <input class="form-control  mr-sm-2" type="search" placeholder="Search for a system, tool, website.." aria-label="Search"
+        [(ngModel)]="mySearch1">
+      <button  type="button" (click)="filterAll()" (keydown)="filterAll()" class="btn btn-light my-2 my-sm-0 search-btn" >Search</button>
+    </div>
+  </nav>
 
-   
-  </div>
+
+</div>
 
 
 <div class="container">
-<div class="filter-wrapper">
+  <div class="filter-wrapper">
 
-  <div class="row text-left">
-    <div class="col-lg-3 my-auto filter-by-wrapper">
-    <span class="filter-by ">Filter By Department:</span>
+    <div class="row text-left">
+      <div class="col-lg-3 my-auto filter-by-wrapper">
+        <span class="filter-by">Filter By Department:</span>
+      </div>
+      <div class="my-auto col-lg-9 ">
+        <p>
+          <a href="#" class="tag-span" [ngClass]="{'tag-span-selected': selectedTgaVlue == 'All Departments'}" (click)="filterByTag('All Departments')"><span>{{'All
+              Departments'}}</span></a>
+          <a href="#" class="tag-span" *ngFor="let tag of tags" [ngClass]="{'tag-span-selected': selectedTgaVlue == tag}"
+            (click)="filterByTag(tag)"><span>{{tag}}</span></a>
+        </p>
+      </div>
     </div>
-  <div class="my-auto col-lg-9 ">
-    <p><a href="#" class="tag-span" 
-     *ngFor="let tag of tags" [ngClass]="{'tag-span-selected': selectedTgaVlue == tag}"
-      (click)="filterByTag(tag)"><span>{{tag}}</span></a>
-    </p>
+    <div *ngFor="let item of temp">
+      <div id="{{item.Name}}">
+        <h2 class="item-category"> &middot; {{item.Name}}</h2>
+        <ul class="row cards-list">
+
+          <ng-container *ngFor="let app of (item.SystemInfos | filterDataObjects)">
+            <li  class="card-list-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
+
+              <app-card [card]="app"></app-card>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
     </div>
   </div>
-  <div *ngFor="let item of temp" >
-    <div id="{{item.Name}}">
-    <h2 class="item-category"> &middot; {{item.Name}}</h2>
-    <ul class="row cards-list" >
-      <ng-container *ngFor="let app of (item.SystemInfos | filterDataObjects)">
-        <li *ngIf="checkTag(app.Tags)" class="card-list-item col-lg-3 col-md-6 col-sm-6 col-xs-12">
-          <h1> {{item.SystemInfos.length}}</h1>
-          <app-card  [card]="app"></app-card>
-      </li>
-    </ng-container>
-    </ul>
-  </div>
-  </div>
-</div>
 </div>

@@ -24,11 +24,17 @@ export interface IHttpResponse {
 }
 
 export interface ICardInfo {
-    SystemInfos: [];
-    Name: string;
-    icon: string;
-    Description: number;
-    URL : string ;
-    Tags : string ;
+    SystemId: string,
+    CategoryId: string,
+    Name: string,
+    Tags : string,  
+    Description: number,
+    URL : string,
+    IconPath: string
+}
 
+export interface IApps {
+    CategoryId: string,
+    Name: string,
+    SystemInfos : ICardInfo[]    
 }
