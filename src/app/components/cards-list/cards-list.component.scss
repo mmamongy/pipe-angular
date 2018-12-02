@@ -74,6 +74,9 @@
     margin: 1rem 0; 
     font-size: 1.75rem;
     font-weight: 600;
+    &:before {
+        content:"• ";
+    }
 }
 .cards-list{    
     padding:0;

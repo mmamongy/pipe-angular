@@ -22,27 +22,27 @@ export class AppComponent implements OnInit {
   public mines: [];
   constructor(private apiService: ApisService) {
   }
-  search = (text$: Observable<string>) =>
-  text$.pipe(
-    debounceTime(200),
-    distinctUntilChanged(),
-    map(term => term.length < 2 ? []
-      : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
-  )
-  searchApi = (text$: Observable<any>) =>
-    text$.pipe(
-      debounceTime(200),
-      distinctUntilChanged(),
-      switchMap(term => term.length < 2 ? []
-        : this.apiService.searchApi(term).pipe(
-          map(response =>
-            response[1]
-          )
-        )
-    ));
-    formatter = (x: {name: string}) =>{
-     return x;
-    } ;
+  // search = (text$: Observable<string>) =>
+  // text$.pipe(
+  //   debounceTime(200),
+  //   distinctUntilChanged(),
+  //   map(term => term.length < 2 ? []
+  //     : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+  // )
+  // searchApi = (text$: Observable<any>) =>
+  //   text$.pipe(
+  //     debounceTime(200),
+  //     distinctUntilChanged(),
+  //     switchMap(term => term.length < 2 ? []
+  //       : this.apiService.searchApi(term).pipe(
+  //         map(response =>
+  //           response[1]
+  //         )
+  //       )
+  //   ));
+  //   formatter = (x: {name: string}) =>{
+  //    return x;
+  //   } ;
   //   map(term => term.length < 2 ? []
   // : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
 }

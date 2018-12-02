@@ -7,6 +7,7 @@
     .descrption  {
         margin: .5rem  1rem ; 
         padding: 10px;
+       
         .icon{
             font-size: 51px;
             text-align: center;
@@ -14,6 +15,16 @@
         }
         p {
            font-size: 0.8rem;
+           height: 100px;
+        }
+        .go-to{
+            text-decoration: none ;
+            background: #07307b;
+             color: #fff;
+            text-align: center;
+            width: -webkit-fill-available;
+            font-size: 14px;
+            white-space: normal ;
         }
      }
     .title-container {
