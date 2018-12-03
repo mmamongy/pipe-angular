@@ -116,7 +116,7 @@ selectedTags: Array < any> [];
         for (let [key, value] of Object.entries(t)) {
 
         if (typeof (value) === 'string') {
-        if (value.toLowerCase().indexOf(this.mySearch1) > -1) {
+        if (value.toLowerCase().indexOf(this.mySearch1.toLowerCase()) > -1) {
         match = true;
         }
         }
