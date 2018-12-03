@@ -9,6 +9,7 @@ import {ICardInfo} from '../../helperClasses/commonIneterfaces';
 export class CardComponent implements OnInit {
 
   @Input() card: ICardInfo;
+  imgpath: string = "http://commsdots.itworx.com/Images/reqLogicicon.png" ;
   
   constructor() { 
   }

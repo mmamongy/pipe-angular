@@ -9,10 +9,14 @@ import { ApisService } from './services/apis.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  User : any = { resource:[]};
   ngOnInit(): void {
-    this.apiService.getTags().subscribe(d => {
-      console.log('Data => ', d) ;
-    })
+
+    this.apiService.getUserInfo().subscribe( data=> {
+      this.User = data.resource ;
+     
+    }) ;
   }
  
   title = 'search';
@@ -22,28 +26,5 @@ export class AppComponent implements OnInit {
   public mines: [];
   constructor(private apiService: ApisService) {
   }
-  // search = (text$: Observable<string>) =>
-  // text$.pipe(
-  //   debounceTime(200),
-  //   distinctUntilChanged(),
-  //   map(term => term.length < 2 ? []
-  //     : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
-  // )
-  // searchApi = (text$: Observable<any>) =>
-  //   text$.pipe(
-  //     debounceTime(200),
-  //     distinctUntilChanged(),
-  //     switchMap(term => term.length < 2 ? []
-  //       : this.apiService.searchApi(term).pipe(
-  //         map(response =>
-  //           response[1]
-  //         )
-  //       )
-  //   ));
-  //   formatter = (x: {name: string}) =>{
-  //    return x;
-  //   } ;
-  //   map(term => term.length < 2 ? []
-  // : states.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
-}
+ }
 

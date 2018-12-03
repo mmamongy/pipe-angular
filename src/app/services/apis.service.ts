@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams, HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {IApps} from './../helperClasses/commonIneterfaces' ;
 
 const WIKI_URL= 'https://en.wikipedia.org/w/api.php';
 const URL = 'http://commsdots.itworx.com/' ;
@@ -41,6 +42,6 @@ export class ApisService {
   }
   getSystemInfo(){
     return this.http
-    .get(URL + 'Home/GetSystemInfo')
+    .get<IApps[]>(URL + 'Home/GetSystemsInfo' , this.requestOptions)
   }
 }

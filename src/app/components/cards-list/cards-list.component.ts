@@ -3,11 +3,8 @@ Component,
 OnInit,
 ElementRef,
 AfterViewInit,
-AfterContentInit
-} from '@angular/core';
-import {
-HttpClient
-} from '@angular/common/http';
+AfterContentInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import {
 ICardInfo,
 IApps
@@ -35,27 +32,13 @@ styleUrls: ['./cards-list.component.scss']
 })
 export class CardsListComponent implements OnInit, AfterViewInit {
 ngAfterViewInit(): void {
-// console.log(this.element.nativeElement.children[0]);
-// console.log(this.element.nativeElement.children[0].offsetHeight);
-console.log(document.getElementsByTagName('li'));
-
 }
 
 apps: IApps[];
 mySearch1: string;
 selcetedTag: number = 1;
 selectedTgaVlue: string = 'All Departments';
-tags = [
-"Administration",
-"Communications",
-"Facility",
-"Marketing",
-"MIS",
-"OPEX",
-"Procurement",
-"Quality",
-"Talent"
-];
+tags : any;
 selectedTags: Array < any> [];
   element: ElementRef;
   status: boolean = false;
@@ -67,13 +50,15 @@ selectedTags: Array < any> [];
     constructor(private http: HttpClient, private api: ApisService, el: ElementRef) {
     this.element = el;
     this.temp = [];
-    this.getSystemsData().subscribe(data => {
-    this.apps = data;
-    this.temp = data;
-    this.filterAll() ;
-    this.filterByTag('All Departments') ;
-
-    });
+    this.api.getSystemInfo().subscribe((data:IApps[])  => {
+      
+      this.apps = data ;
+      this.temp = data; 
+      this.filterByTag('All Departments') ;
+    })
+    this.api.getTags().subscribe( data=>{ 
+      this.tags = data ;
+    })
     }
 
     ngOnInit() {
@@ -103,7 +88,7 @@ selectedTags: Array < any> [];
       this.temp.push(obj);
       }
       });
-      console.log(this.temp) ;
+     
       }
 
       checkTag(value) {
@@ -117,7 +102,7 @@ selectedTags: Array < any> [];
       }
 
       filterAll() {
-      console.log("Clicked search => ", this.mySearch1);
+    
       if (this.mySearch1 == '') {
       this.temp = this.apps.map(x => Object.assign({}, x));;
       } else {
@@ -131,9 +116,7 @@ selectedTags: Array < any> [];
         for (let [key, value] of Object.entries(t)) {
 
         if (typeof (value) === 'string') {
-        //console.log(value.toLowerCase().indexOf(search))
         if (value.toLowerCase().indexOf(this.mySearch1) > -1) {
-        // console.log('Value ' , value) ;
         match = true;
         }
         }
@@ -141,14 +124,13 @@ selectedTags: Array < any> [];
         if (match) {
         obj.SystemInfos.push(t);
         }
-        // console.log('my obj ' ,obj) ;
+    
         });
         if (obj.SystemInfos.length > 0) {
         obj.Name = e.Name;
         this.temp.push(obj);
         }
         });
-        //console.log('Temp ' , this.temp);
         }
         }
         }
