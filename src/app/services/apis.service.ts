@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams, HttpHandler } from '@angular/commo
 import { Observable } from 'rxjs';
 import {IApps} from './../helperClasses/commonIneterfaces' ;
 
+
 const WIKI_URL= 'https://en.wikipedia.org/w/api.php';
 const URL = 'http://commsdots.itworx.com/' ;
 const PARAMS = new HttpParams({
@@ -43,5 +44,6 @@ export class ApisService {
   getSystemInfo(){
     return this.http
     .get<IApps[]>(URL + 'Home/GetSystemsInfo' , this.requestOptions)
+    
   }
 }
