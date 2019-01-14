@@ -70,6 +70,7 @@ export class CardsListComponent implements OnInit, AfterViewInit {
     this.status = !this.status;
     this.selectedTgaVlue = value;
     this.temp = [];
+    console.log(this.apps) ;
     this.apps.forEach(element => {
       let obj = {
         Name: "",
