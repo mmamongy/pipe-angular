@@ -42,7 +42,7 @@
         </select>
       </div>
       <div class=" col-lg-2 my-auto select-type" >
-        <select  [(ngModel)]="selectedType" >
+        <select  [(ngModel)]="selectedType" (change)=filterByTag($event)>
           <option>
             All Types
           </option>
