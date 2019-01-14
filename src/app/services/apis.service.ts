@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import {IApps} from './../helperClasses/commonIneterfaces' ;
 
 
+
 const WIKI_URL= 'https://en.wikipedia.org/w/api.php';
 const URL = 'http://commsdots.itworx.com/' ;
 const PARAMS = new HttpParams({
@@ -27,19 +28,17 @@ export class ApisService {
   }
  
   
-  
- searchApi(term) : Observable<any>{
-   return  this.http
-   .get(WIKI_URL, {params: PARAMS.set('search', term)})
-  }
   getUserInfo(){
     return this.http
     .get(URL+'Users/GetUserInfo', this.requestOptions) ;
-    
   }
-  getTags(){
+  getTypes(){
+    return this.http.get(URL+"Home/GetTypes",this.requestOptions);
+  }
+
+  getDepartments(){
     return this.http
-    .get(URL + 'Home/GetTags' , this.requestOptions);
+    .get(URL + 'Home/GetDepartments' , this.requestOptions);
   }
   getSystemInfo(){
     return this.http

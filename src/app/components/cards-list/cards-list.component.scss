@@ -34,8 +34,16 @@
 .filter-wrapper{
     margin-top:1rem; 
    .filter-by-wrapper{
-       margin-right:-29px; 
+       margin-right:-70px; 
+      
    }
+   .select-department ,.select-type{
+    margin: auto -10px;
+    select {
+    padding:5px 3px;
+    }
+}
+
     
     .filter-by {
         margin: 0.6rem;
@@ -76,6 +84,10 @@
     font-weight: 600;
     &:before {
         content:"• ";
+    }
+    i.fa-envelope {
+        font-size: 1.4rem;
+        color: #07307b; 
     }
 }
 .cards-list{    

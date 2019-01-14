@@ -1,51 +1,8 @@
-<!-- <div class="container">
-<div class="row">
-<div class="col-lg-6">
-<label for="typeahead-basic">Search for a state:</label>
-<input id="typeahead-basic" [resultFormatter]="formatter" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="searchApi"/>
-</div>
-<div class="col-lg-6">
-  <label for="typeahead-basic">Search for a state:</label>
-  <input id="typeahead-basic"  type="text" class="form-control" [(ngModel)]="modelStatic" [ngbTypeahead]="search"/>
-  </div>
-</div>
-
-<hr>
-<h1>
-  Search with pipes 
-</h1>
-<div class="row">
-  <div class="col-lg-6">
-    <h4>Pipe on String</h4>
-    <hr>
-  <div>   
-        <input type="text" class="form-control" placeholder="search..." [(ngModel)]="mySearch">
-      </div>  
-  <div  *ngFor="let item of items | filterData: mySearch: 'name';  let i = index">
-    <h5>{{item.name}}</h5>
-  </div>
-</div>  
-  <div class="col-lg-6">
-    <h4>Pipe on any value in Object</h4>
-    <hr>
-          <div>
-            <input type="text" class="form-control" placeholder="search..." [(ngModel)]="mySearch1">
-          </div>
-          <div class="d-block" *ngFor="let item of (items | filterDataObjects: mySearch1) ">
-            <h5><span>{{item.name}}</span> | <span> {{item.role}}</span></h5>
-          </div>
-        </div>
-      </div>
-  </div>
- -->
-
  
 <div class="header">
 
   <div class="container">
     <div class="row justify-content-between add-margin">
-
-  
         <div class=" col-3  my-auto">
            <img  class="navbar-brand comms-img" src="./../assets/img/comms.png" alt="comm">
           </div>
@@ -70,21 +27,16 @@
           </div>
         </div>
   </div>
-
-  
   </div>
   
 
  <div class="container">
    <div class="row">
-      <div class="wrapper">
-         
+      <div class="wrapper col-12">   
           <cards-list></cards-list>
           <router-outlet></router-outlet>
       </div>
-      
    </div>
-
  </div>
  <div class="footer">
    <div class="container">

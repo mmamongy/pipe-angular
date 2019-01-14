@@ -32,32 +32,42 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   showCategory: true;
   count: number = 0;
   temp = Array<IApps>();
+  types:Array<any>[];
+  departments:Array<any>[];
+  selectedDept:string;
+  
   
 
   constructor( private http: HttpClient, private api: ApisService, el: ElementRef ) {
-    this.tags = [
-      "Administration",
-      "Communications",
-      "Facility",
-      "Marketing",
-      "MIS",
-      "OPEX",
-      "Procurement",
-      "Quality",
-      "Talent"
-      ];
+    // this.tags = [
+    //   "Administration",
+    //   "Communications",
+    //   "Facility",
+    //   "Marketing",
+    //   "MIS",
+    //   "OPEX",
+    //   "Procurement",
+    //   "Quality",
+    //   "Talent"
+    //   ];
     this.element = el;
     this.temp = [];
-    this.getSystemsData().subscribe((data: IApps[]) => {
+    this.types=[];
+    this.api.getSystemInfo().subscribe((data: IApps[]) => {
       this.apps = data;
       this.temp = data;
       this.filterByTag("All Departments");
     });
+  
+    this.api.getDepartments().subscribe((dept:any)=>{
+      this.departments=dept;
+    })
 
-    this.api.getTags().subscribe(data => {
-      this.tags = data;
-     
-    });
+    this.api.getTypes().subscribe((type:any)=>{
+      this.types=type;
+    })
+
+
   }
 
   ngOnInit() {}
@@ -67,8 +77,10 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   }
 
   filterByTag(value) {
+    console.log(value);
     this.status = !this.status;
-    this.selectedTgaVlue = value;
+    this.selectedDept=value;
+    //this.selectedTgaVlue = value;
     this.temp = [];
     console.log(this.apps) ;
     this.apps.forEach(element => {
@@ -77,9 +89,13 @@ export class CardsListComponent implements OnInit, AfterViewInit {
         SystemInfos: Array<ICardInfo>()
       } as IApps;
       element.SystemInfos.filter(d => {
-        if (this.selectedTgaVlue === d.Tags) {
+       // if (this.selectedTgaVlue === d.Tags) {
+        if (this.selectedDept === d.Tags) {
+
           obj.SystemInfos.push(d);
-        } else if (this.selectedTgaVlue === "All Departments") {
+        } //else if (this.selectedTgaVlue === "All Departments") {
+         else if (this.selectedDept === "All Departments") {
+
           obj.SystemInfos.push(d);
         }
       });
@@ -130,6 +146,9 @@ export class CardsListComponent implements OnInit, AfterViewInit {
           this.temp.push(obj);
         }
       });
+      if (this.temp.length === 0) {
+        this.temp = this.apps.map(x => Object.assign({}, x));
+      }
     }
   }
 }

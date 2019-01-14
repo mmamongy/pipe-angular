@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
   User : any = { resource:[]};
   ngOnInit(): void {
 
-    this.apiService.getUserInfo().subscribe( (data: any) => {
-      this.User = data.resource ;
+    // this.apiService.getUserInfo().subscribe( (data: any) => {
+    //   this.User = data.resource ;
      
-    }) ;
+    // }) ;
   }
  
   title = 'search';
