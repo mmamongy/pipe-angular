@@ -32,8 +32,8 @@
         </p>
       </div>-->
       <div class="col-lg-2 my-auto select-department">
-        <select [(ngModel)]="selectedDept" (change)=filterByTag($event) >
-          <option>
+        <select [(ngModel)]="selectedDept" (change)=filterByTag($event.target.value) >
+          <option value="All Departments">
             All Departments
           </option>
           <option *ngFor="let dept of departments" [value]="dept">
@@ -42,8 +42,8 @@
         </select>
       </div>
       <div class=" col-lg-2 my-auto select-type" >
-        <select  [(ngModel)]="selectedType" (change)=filterByTag($event)>
-          <option>
+        <select  [(ngModel)]="selectedType" (change)=filterByTag($event.target.value)>
+          <option value="All Types">
             All Types
           </option>
           <option *ngFor="let type of types" [value]="type">
@@ -54,7 +54,7 @@
     </div>
     <div *ngFor="let item of temp">
       <div id="{{item.Name}}">
-        <h2 class="item-category">  {{item.Name}} <a href=""><i class="fas fa-envelope"></i></a></h2>
+        <h2 class="item-category">  {{item.Name}} <a href="#" (click)="open(content)" data-toggle="modal" data-target="#content"><i class="fas fa-envelope"></i></a></h2>
         <ul class="row cards-list">
 
           <ng-container *ngFor="let app of (item.SystemInfos | filterDataObjects)">
@@ -68,3 +68,32 @@
     </div>
   </div>
 </div>
+
+<!-- test modal  -->
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Send Email</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+      <form action="mailto:maryam.mamdouh@itworx.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+        </form>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+

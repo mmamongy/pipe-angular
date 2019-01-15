@@ -25,16 +25,18 @@ export interface IHttpResponse {
 
 export interface ICardInfo {
     SystemId: string,
-    CategoryId: string,
+    DepartmentId: string,
     Name: string,
-    Tags : string,  
+    Type:string,
+    SearchKeyword : string,  
     Description: number,
     URL : string,
+    Email: string,
     IconPath: string
 }
 
 export interface IApps {
-    CategoryId: string,
+    DepartmentId: string,
     Name: string,
     SystemInfos : ICardInfo[]    
 }

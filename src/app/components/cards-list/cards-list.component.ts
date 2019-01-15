@@ -3,7 +3,7 @@ import {
   OnInit,
   ElementRef,
   AfterViewInit,
-  AfterContentInit
+  AfterContentInit, Input
 } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { ICardInfo, IApps } from "../../helperClasses/commonIneterfaces";
@@ -12,6 +12,7 @@ import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import { ApisService } from "./../../services/apis.service";
 import { FormsModule } from "@angular/forms";
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: "cards-list",
@@ -34,22 +35,13 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   temp = Array<IApps>();
   types:Array<any>[];
   departments:Array<any>[];
-  selectedDept:string;
-  
+  selectedDept:string = 'All Departments';
+  selectedType: string  = 'All Types';
+  closeResult: string;
   
 
-  constructor( private http: HttpClient, private api: ApisService, el: ElementRef ) {
-    // this.tags = [
-    //   "Administration",
-    //   "Communications",
-    //   "Facility",
-    //   "Marketing",
-    //   "MIS",
-    //   "OPEX",
-    //   "Procurement",
-    //   "Quality",
-    //   "Talent"
-    //   ];
+  constructor( private http: HttpClient, private api: ApisService, el: ElementRef, 
+    private modalService: NgbModal) {  
     this.element = el;
     this.temp = [];
     this.types=[];
@@ -66,8 +58,24 @@ export class CardsListComponent implements OnInit, AfterViewInit {
     this.api.getTypes().subscribe((type:any)=>{
       this.types=type;
     })
+  }
 
+  open(content) {
+    console.log("entered");
+    this.modalService.open(content);
 
+   
+  
+  }
+  
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
   }
 
   ngOnInit() {}
@@ -77,25 +85,25 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   }
 
   filterByTag(value) {
-    console.log(value);
-    this.status = !this.status;
-    this.selectedDept=value;
-    //this.selectedTgaVlue = value;
+    this.status = !this.status;    
     this.temp = [];
-    console.log(this.apps) ;
     this.apps.forEach(element => {
       let obj = {
-        Name: "",
+        Name: value,
         SystemInfos: Array<ICardInfo>()
       } as IApps;
+      if ( element.Name === this.selectedDept) {
+      }
       element.SystemInfos.filter(d => {
-       // if (this.selectedTgaVlue === d.Tags) {
-        if (this.selectedDept === d.Tags) {
-
+        console.log(this.selectedDept);
+        if (this.selectedDept === element.Name && this.selectedType === d.Type ) {
           obj.SystemInfos.push(d);
-        } //else if (this.selectedTgaVlue === "All Departments") {
-         else if (this.selectedDept === "All Departments") {
-
+        } else if ( this.selectedDept === 'All Departments' && this.selectedType === d.Type) {
+          obj.SystemInfos.push(d);
+        }
+         else if (this.selectedDept === element.Name && this.selectedType === 'All Types' ) {
+          obj.SystemInfos.push(d);
+        } else if (this.selectedDept === 'All Departments' && this.selectedType === 'All Types'){ 
           obj.SystemInfos.push(d);
         }
       });
