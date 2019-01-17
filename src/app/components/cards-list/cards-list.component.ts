@@ -21,7 +21,6 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class CardsListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {}
-
   apps: IApps[];
   mySearch1: string;
   selcetedTag: number = 1;
@@ -61,10 +60,7 @@ export class CardsListComponent implements OnInit, AfterViewInit {
   }
 
   open(content) {
-    console.log("entered");
     this.modalService.open(content);
-
-   
   
   }
   
@@ -90,12 +86,13 @@ export class CardsListComponent implements OnInit, AfterViewInit {
     this.apps.forEach(element => {
       let obj = {
         Name: value,
+        Email: element.Email,
         SystemInfos: Array<ICardInfo>()
       } as IApps;
       if ( element.Name === this.selectedDept) {
       }
       element.SystemInfos.filter(d => {
-        console.log(this.selectedDept);
+       
         if (this.selectedDept === element.Name && this.selectedType === d.Type ) {
           obj.SystemInfos.push(d);
         } else if ( this.selectedDept === 'All Departments' && this.selectedType === d.Type) {

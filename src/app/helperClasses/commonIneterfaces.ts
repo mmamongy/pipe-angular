@@ -31,12 +31,12 @@ export interface ICardInfo {
     SearchKeyword : string,  
     Description: number,
     URL : string,
-    Email: string,
     IconPath: string
 }
 
 export interface IApps {
     DepartmentId: string,
     Name: string,
+    Email: string,
     SystemInfos : ICardInfo[]    
 }
